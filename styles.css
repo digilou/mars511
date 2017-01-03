@@ -1,23 +1,28 @@
 body{
-  background:red url(http://www.wallpapers13.com/wp-content/uploads/2015/12/Mars-planet-hd-wallpapers-cool-desktop-background-pictures-1920x1080.jpg) no-repeat fixed center;
+  background:rgb(255,0,0) url(http://www.wallpapers13.com/wp-content/uploads/2015/12/Mars-planet-hd-wallpapers-cool-desktop-background-pictures-1920x1080.jpg) no-repeat fixed center;
 }
 h1{
   color:rgb(255,255,255);
-  font: italic bold 4em Verdana, sans-serif;
+  font: italic bold 4em "Verdana", sans-serif;
   padding:0 .5em;
 }
 #forecast{
   float:left;
   width:400px;
   height:350px;
-  background:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.3);
   margin:0;
+}
+#day{
+  display:block;
+  font-size:2em;
+  text-transform:uppercase;
 }
 #temp{
   display:block;
   font-size:4em;
-  font-color:red;
+  color:rgb(255,0,0);
 }
-#atmosphere{
+#atmo{
   font-weight:bold;
 }
