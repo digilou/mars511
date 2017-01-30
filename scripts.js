@@ -1,42 +1,48 @@
 // MAAS API http://marsweather.ingenology.com/
-
-$(function() {
-  var maasAPI = "http://marsweather.ingenology.com/v1/latest/?format=json";
-  $.getJSON(maasAPI, function(data){
-    $('#day').append(data.report.sol);
-    $('#temp').append(data.report.max_temp_fahrenheit + '&deg;F');
-    $('#atmo').html("<p>Current conditions: " + data.report.atmo_opacity + "</p>");
-  });
-  $.ajaxSetup({cache: false});
-});
-
-
-
-
-/**************
+/*
+{
+  "report": 
+  {
+    "terrestrial_date": "2017-01-25",
+    "sol": 1590,
+    "ls": 305.0,
+    "min_temp": -76.0,
+    "min_temp_fahrenheit": -104.8,
+    "max_temp": -1.0,
+    "max_temp_fahrenheit": 30.2,
+    "pressure": 864.0,
+    "pressure_string": "Higher",
+    "abs_humidity": null,
+    "wind_speed": null,
+    "wind_direction": "--",
+    "atmo_opacity": "Sunny",
+    "season": "Month 11",
+    "sunrise": "2017-01-25T12:37:00Z",
+    "sunset": "2017-01-26T00:51:00Z"
+  }
+}
+*/
 
 // pull in data as soon as document loads
 $(function getMarsWeather() {
-  var maasAPI = "http://marsweather.ingenology.com/v1/latest/?format=json";
-  // CORS error: tried changing to jsonp, tried using .ajax in place of .getJSON, tried beforeSend to add XHR authorization....
-  // maybe I should abandon jQuery for vanilla JS
+  var maasAPI = "http://marsweather.ingenology.com/v1/latest/?format=jsonp";
   $.ajax({
     url: maasAPI,
-    beforeSend: function(xhr) {
-      xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
-    }
+    method: "GET",
+    dataType: "jsonp",
+    //xhr: XMLHttpRequest,
+    /*xhrFields: {
+      withCredentials: true
+    }*/
   })
-  .done(function(data) {
-    console.log(data);
+  .done(function(data){
+    console.log(data.report);
+    $('#day').html("<p>Today is <span>" + data.report.sol + "</span></p>");
+    $('#temp').html(data.report.max_temp_fahrenheit);
+    $('#atmo').html(data.report.atmo_opacity);
   })
-  .fail(function() {
+  .fail(function(){
     console.log("error");
   });
-  //$.getJSON(maasAPI, function(data){
-  //  console.log(data);
-  //  $('#day').html("<p>Today is " + data.report.sol + "</p>");
-  //});
-  // $.ajaxSetup({cache: false});
+  $.ajaxSetup({cache: false});
 }); //end of entire function
-
-**********************/
