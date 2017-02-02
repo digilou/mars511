@@ -34,15 +34,32 @@ $(function getMarsWeather() {
     /*xhrFields: {
       withCredentials: true
     }*/
+    
   })
   .done(function(data){
     console.log(data.report);
-    $('#day').html("<p>Today is <span>" + data.report.sol + "</span></p>");
-    $('#temp').html(data.report.max_temp_fahrenheit);
+    $('#day').html("<h2>Sol: <span>" + data.report.sol + "</span></h2><p>Earth Date: " + data.report.terrestrial_date + "</p>");
+    $('#temp').html(data.report.max_temp_fahrenheit + "&deg; F");
     $('#atmo').html(data.report.atmo_opacity);
+    // jQuery temp toggle
+   $("#c").click(function(){
+     $("#f").removeClass("ui-state-active");
+     $(this).addClass("ui-state-active");
+     $("#temp").html(data.report.max_temp + '&deg; C');
+   });
+   $("#f").click(function(){
+     $("#temp").html(data.report.max_temp_fahrenheit + "&deg; F");
+   });
   })
   .fail(function(){
     console.log("error");
+    $('#forecast').html('<p>Data not available</p>')
   });
   $.ajaxSetup({cache: false});
+
 }); //end of entire function
+
+// use radio button without icons (http://jqueryui.com/checkboxradio/#no-icons) 
+$(function() {
+    $("input").checkboxradio({icon: false});
+});
