@@ -10,19 +10,61 @@ h1{
   float:left;
   width:400px;
   height:350px;
-  background:rgba(255,255,255,.3);
   margin:0;
+  padding:2em;
 }
 #day{
   display:block;
-  font-size:2em;
-  text-transform:uppercase;
+}
+#day h2{
+  color:rgb(255,255,255);
+  font-size:2.75rem;
+  margin-bottom:0;
+}
+#day p{
+  color:rgb(255,255,255);
+  margin:0 auto;
+  font-size:1.5rem;
+}
+#day span{
+  font-weight:bold;
 }
 #temp{
   display:block;
-  font-size:4em;
+  margin:1.5rem auto;
+  font-size:8.5rem;
+  font-weight:bold;
   color:rgb(255,0,0);
 }
+label{
+  margin:1em -.5em;
+}
+label:hover{
+  height:auto;
+}
 #atmo{
-  font-weight:bold;
+  margin:2rem 0;
+  color:rgb(255,255,255);
+  font-size:1.75em;
+}
+/* footer */
+footer {
+  display:block;
+  background-color: black;
+  color: gray;
+  margin-top:2.5rem;
+  height:20vh;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  position: relative;
+  width:100%;
+  bottom:0;
+  text-align: center;
+  border-top:.2em solid rgb(255,255,255);
+}
+footer li{
+  display:inline-block;
+  list-style-type:none;
+  padding-right:.8em;
 }
