@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/digilou/mars511#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
