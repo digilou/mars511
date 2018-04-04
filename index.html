@@ -1,69 +1,78 @@
 <doctype html>
 <html lang="en-us">
+
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="styles/main.css" />
-<title>Mars 511</title>
-</head>
-<body>
-<!-- masthead -->
-<h1>Mars<span>511</span></h1>
-
-<main>
-  <!-- NASA image -->
-  <section id="image-box">
-    <!-- NASA image of Mars -->
-    <div id="image"></div>
-  </section>
-
-    <!--
-      NASA image first;
-      Day:
-      Temp (toggle):
-      Atmospheric Conditions (icon?):
-      Humidity:
-      Wind Speed:
-      Wind Direction:
-      Pressure_string: (higher, lower)
-    --> 
-
-  <!-- current weather -->
-  <section id="forecast">
-    <div id="day"></div>
-    <div id="temp"></div>
-      <label class="active" for="f">&deg;F</label>
-      <input type="radio" name="temp_select" id="f" checked>
-      <label for="c">&deg;C</label>
-      <input type="radio" name="temp_select" id="c">
-    <div id="atmo"></div>
-  </section>
-</main>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-<!-- footer -->
-<footer>
-    <p>Weather API: <a href="http://marsweather.ingenology.com/">MAAS</a></p>
-    <p>Copyright &copy;2017 | Amy Carney</p>
-    <ul>
-    <li><a href="https://github.com/digilou">
-      <i class="fa fa-github fa-fw"></i>
-      </a>
-    </li>
-    <li><a href="https://www.linkedin.com/in/carneyamy">
-      <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li><a href="https://carneydevelopoit.wordpress.com/">
-      <i class="fa fa-wordpress"></i>
-      </a>
-    </li>
-    <li><a href="https://www.freecodecamp.com/digilou">
-      (<i class="fa fa-fire fa-fw"></i>)
-      </a>
-    </li>
-    </ul>
-</footer><!-- scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossOrigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" crossOrigin="anonymous"></script>
-<script src="scripts/api.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  
+  <title>Mars 511</title>
+</head>
+
+<body>
+  <header>
+    <h1>Mars<span>511</span></h1>
+  </header>>
+
+  <main>
+    <!-- NASA image -->
+    <section id="image-box">
+      <!-- NASA image of Mars -->
+      <div id="image"></div>
+    </section>
+
+      <!--
+        NASA image first;
+        Day:
+        Temp (toggle):
+        Atmospheric Conditions (icon?):
+        Humidity:
+        Wind Speed:
+        Wind Direction:
+        Pressure_string: (higher, lower)
+      --> 
+
+    <!-- current weather -->
+    <section id="forecast">
+      <div id="day"></div>
+      <div id="temp"></div>
+        <label class="active" for="f">&deg;F</label>
+        <input type="radio" name="temp_select" id="f" checked>
+        <label for="c">&deg;C</label>
+        <input type="radio" name="temp_select" id="c">
+      <div id="atmo"></div>
+    </section>
+  </main>
+    
+  <!-- footer -->
+  <footer>
+      <p>Weather API: <a href="http://marsweather.ingenology.com/">MAAS</a></p>
+      <p>Copyright &copy;2017 | Amy Carney</p>
+      <ul>
+      <li><a href="https://github.com/digilou">
+        <i class="fa fa-github fa-fw"></i>
+        </a>
+      </li>
+      <li><a href="https://www.linkedin.com/in/carneyamy">
+        <i class="fa fa-linkedin"></i>
+        </a>
+      </li>
+      <li><a href="https://carneydevelopoit.wordpress.com/">
+        <i class="fa fa-wordpress"></i>
+        </a>
+      </li>
+      <li><a href="https://www.freecodecamp.com/digilou">
+        (<i class="fa fa-fire fa-fw"></i>)
+        </a>
+      </li>
+      </ul>
+  </footer>
+  
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossOrigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" crossOrigin="anonymous"></script>
+  <script src="scripts/api.js"></script>
+
 </body>
 </html>

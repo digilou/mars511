@@ -1,0 +1,31 @@
+{
+  "name": "mars-511",
+  "version": "1.0.0",
+  "description": "Creating a more pleasant commute on Mars",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digilou/mars511.git"
+  },
+  "keywords": [
+    "mars",
+    "space",
+    "NASA"
+  ],
+  "author": "Amy Carney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digilou/mars511/issues"
+  },
+  "homepage": "https://github.com/digilou/mars511#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.2.1"
+  }
+}
