@@ -2,9 +2,9 @@
   "name": "mars-511",
   "version": "1.0.0",
   "description": "Creating a more pleasant commute on Mars",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "test"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
