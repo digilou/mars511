@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/digilou/mars511/issues"
   },
-  "homepage": "https://github.com/digilou/mars511#readme"
+  "homepage": "https://github.com/digilou/mars511#readme",
+  "devDependencies": {
+    "react-axe": "^3.0.1"
+  }
 }
