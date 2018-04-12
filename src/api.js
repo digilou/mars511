@@ -1,31 +1,6 @@
-// MAAS API http://marsweather.ingenology.com/
-/*
-{
-  "report": 
-  {
-    "terrestrial_date": "2017-01-25",
-    "sol": 1590,
-    "ls": 305.0,
-    "min_temp": -76.0,
-    "min_temp_fahrenheit": -104.8,
-    "max_temp": -1.0,
-    "max_temp_fahrenheit": 30.2,
-    "pressure": 864.0,
-    "pressure_string": "Higher",
-    "abs_humidity": null,
-    "wind_speed": null,
-    "wind_direction": "--",
-    "atmo_opacity": "Sunny",
-    "season": "Month 11",
-    "sunrise": "2017-01-25T12:37:00Z",
-    "sunset": "2017-01-26T00:51:00Z"
-  }
-}
-*/
-
 // weather from MAAS API
 $(function getMarsWeather() {
- var maasAPI = "//marsweather.ingenology.com/v1/latest/?format=jsonp";
+ var maasAPI = process.env.MAAS_API;
   $.ajax({
     url: maasAPI,
     method: "GET",
@@ -68,7 +43,7 @@ https://api.nasa.gov/api.html#MarsPhotos
 */
 
 function getImages(){
-  var nasaAPI= "//api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEYapi_key=FWkpdy6gQRDhnyHdvhBYSw33XpRUThfKbUnt99Bw";
+  var nasaAPI= process.env.NASA_IMG_API;
 
   $.ajax({
     url: nasaAPI,
