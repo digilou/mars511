@@ -1,3 +1,6 @@
+# VS Code tasks
+/.vscode
+
 # dependencies
 /node_modules
 
