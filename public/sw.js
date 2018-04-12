@@ -36,7 +36,7 @@ self.addEventListener('activate', e => {
 
 // fetch cache, with network and generic fallbacks
 self.addEventListener('fetch', e => {
-  event.respondWith(
+  e.respondWith(
     caches.match(e.request)
     .then(response => {
       return response || fetch(e.request);
