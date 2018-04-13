@@ -7,7 +7,7 @@
       {
           "label": "Sass Compile",
           "type": "shell",
-          "command": "node-sass src/css/main.scss src/css/main.css",
+          "command": "node-sass public/css/main.scss public/css/main.css",
           "group": "build",
           "problemMatcher": []
       }

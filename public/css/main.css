@@ -9,15 +9,15 @@ html {
   height: 100%; }
 
 body {
-  background: red url(/images/mars-bkgd.jpg) no-repeat center;
+  background: red url(../mars-bkgd.jpg) no-repeat center;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Open Sans", Arial, Helvetica, sans-serif; }
 
 /* Typography */
 h1 {
   color: #febc48;
-  font: normal 3.5rem 'Orbitron', sans-serif; }
-  h1 span {
+  font: normal 3.5rem "Orbitron", Arial, Helvetica, sans-serif; }
+  h1 div {
     display: block;
     font-size: 9rem;
     font-style: italic;
@@ -37,7 +37,14 @@ label {
     color: black; }
 
 input[type="radio"] {
-  visibility: hidden; }
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 /* Structure */
 footer {
@@ -113,3 +120,7 @@ footer li a {
 #atmo {
   margin: 2rem 0;
   font-size: 3.5em; }
+
+@supports (grid-area: auto) {
+  body {
+    display: grid; } }

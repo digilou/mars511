@@ -1,9 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Orbitron');
 
+$color-white: rgb(255,255,255);
+$color-black: rgb(0,0,0);
+$color-mars-red: rgb(255,0,0);
+$color-gold: rgb(254,188,72);
+$text-open-sans: "Open Sans", Arial, Helvetica, sans-serif;
+$text-orbitron: "Orbitron", Arial, Helvetica, sans-serif;
+
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
 /* Normalize */
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -11,17 +30,17 @@ html {
   height: 100%;
 }
 
-body{
-  background: rgb(255,0,0) url(./mars-bkgd.jpg) no-repeat center;
+body {
+  background: $color-mars-red url(../mars-bkgd.jpg) no-repeat center;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $text-open-sans;
 }
 
 /* Typography */
 
-h1{
-  color: rgb(254,188,72);
-  font: normal 3.5rem 'Orbitron', sans-serif;;
+h1 {
+  color: $color-gold;
+  font: normal 3.5rem $text-orbitron;
   div {
     display: block;
     font-size: 9rem;
@@ -33,21 +52,21 @@ h1{
 }
 
 label {
-  background-color: rgb(255,255,255);
+  background-color: $color-white;
   margin: 1rem -.3em;
   padding: 1rem;
   font-size: 2rem;
   &:hover,
   &:focus {
     height: auto;
-    background: rgb(254,188,72);
+    background: $color-gold;
     font-weight: 600;
-    color: rgb(0,0,0);
+    color: $color-black;
   }
 }
 
 input[type="radio"]{
-  visibility: hidden;
+  @include visually-hidden;
 }
 
 /* Structure */
@@ -129,4 +148,10 @@ footer li a{
 #atmo{
   margin: 2rem 0;
   font-size: 3.5em;
+}
+
+@supports (grid-area: auto) {
+  body {
+    display: grid;
+  }
 }
