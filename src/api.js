@@ -1,6 +1,6 @@
 // weather from MAAS API
 $(function getMarsWeather() {
- var maasAPI = process.env.MAAS_API;
+ var maasAPI = '//marsweather.ingenology.com/v1/latest/?format=jsonp';
   $.ajax({
     url: maasAPI,
     method: "GET",
