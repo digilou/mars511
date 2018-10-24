@@ -4,10 +4,15 @@
   "description": "Creating a more pleasant commute on Mars",
   "private": true,
   "dependencies": {
+    "cryptiles": "^4.1.2",
+    "deep-extend": "^0.6.0",
+    "macaddress": "^0.2.9",
     "npm": "^6.4.1",
+    "randomatic": "^3.1.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "url-parse": "^1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
